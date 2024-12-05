@@ -23,7 +23,7 @@
   grid-template-columns: repeat(3, 100px);
   gap: 10px;
   justify-content: center;
-  margin: 20px auto;
+  margin: 30px auto;
 }
 
 .box {
@@ -49,7 +49,6 @@
 }
 
 .reset {
-  margin-top: 20px;
   padding: 10px 20px;
   font-size: 1em;
   cursor: pointer;
@@ -61,4 +60,10 @@
 
 .reset:hover {
   background-color: #005488;
+}
+
+.winner-icon {
+  width: 1.4em; /* Dopasowanie szerokości do rozmiaru fonta */
+  height: 1.4em; /* Dopasowanie wysokości do rozmiaru fonta */
+  vertical-align: middle; /* Wyrównanie ikony do środka tekstu */
 }
