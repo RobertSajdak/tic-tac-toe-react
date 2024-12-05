@@ -23,9 +23,14 @@ const TicTacToe = () => {
 
   const checkWinner = (currentBoard, index) => {
     const winningCombinations = [
-      [0, 1, 2], [3, 4, 5], [6, 7, 8],
-      [0, 3, 6], [1, 4, 7], [2, 5, 8],
-      [0, 4, 8], [2, 4, 6],
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6],
     ];
 
     // Zwiększ licznik ruchów odpowiedniego gracza
@@ -64,31 +69,35 @@ const TicTacToe = () => {
   return (
     <div className="container">
       <h1 className="title">
-        Tic-Tac-Toe Game in <span>React</span>
+        Tic-Tac-Toe game in <span>React</span>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+          alt="React Logo"
+          className="react-logo"
+        />
       </h1>
+
       <div className="status">
-        {winner
-          ? winner === "draw"
-            ? "It's a draw!"
-            : (
-              <span>
-                <img
-                  src={winner.player === "x" ? cross_icon : circle_icon}
-                  alt={winner.player.toUpperCase()}
-                  className="winner-icon"
-                />{" "}
-                won in {winner.moves} moves. Congratulations!
-              </span>
-            )
-          : `Next Player: ${isXNext ? "X" : "O"}`}
+        {winner ? (
+          winner === "draw" ? (
+            "It's a draw!"
+          ) : (
+            <span>
+              <img
+                src={winner.player === "x" ? cross_icon : circle_icon}
+                alt={winner.player.toUpperCase()}
+                className="winner-icon"
+              />{" "}
+              won in {winner.moves} moves. Congratulations!
+            </span>
+          )
+        ) : (
+          `Next Player: ${isXNext ? "X" : "O"}`
+        )}
       </div>
       <div className="board">
         {board.map((value, index) => (
-          <div
-            key={index}
-            className="box"
-            onClick={() => handleClick(index)}
-          >
+          <div key={index} className="box" onClick={() => handleClick(index)}>
             {value === "x" && <img src={cross_icon} alt="X" />}
             {value === "o" && <img src={circle_icon} alt="O" />}
           </div>
