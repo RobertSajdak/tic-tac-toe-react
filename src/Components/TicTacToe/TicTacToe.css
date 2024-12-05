@@ -1,60 +1,64 @@
 .container {
   text-align: center;
+  margin: 20px;
 }
 
 .title {
-  align-items: center;
-  color: #fff;
-  display: flex;
-  font-size: 50px;
-  justify-content: center;
+  font-size: 2em;
   margin-bottom: 10px;
-  margin-top: 0px;
-}
-
-.title img {
-  height: 46px;
-  margin-top: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .title span {
-  color: #61dbfb;
-  padding-left: 15px;
+  color: #61dafb;
+}
+
+.status {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 .board {
-  display: flex;
-  height: 480px;
-  margin: auto;
-  width: 480px;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
 }
 
-.boxes {
-  background: #61dbfb;
-  border: 6px solid #004d9a;
-  border-radius: 12px;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border: 2px solid #a2a2a2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
   cursor: pointer;
-  display: flex;
-  height: 150px;
-  width: 150px;
+  position: relative;
 }
 
-.boxes img {
-  margin: 30px 30px;
+.box img {
+  width: 80%;
+  height: 80%;
+}
+
+.box:hover {
+  background-color: #a2a2a2;
 }
 
 .reset {
-  background-color: #010650;
-  border: none;
-  border-radius: 50px;
-  color: #61dbfb;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
   cursor: pointer;
-  font-size: 30px;
-  height: 80px;
-  margin-bottom: 10px;
-  margin-top: 40px;
-  outline: none;
-  width: 200px;
+  background-color: #61dafb;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+.reset:hover {
+  background-color: #005488;
 }
